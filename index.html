@@ -43,10 +43,13 @@
     <script>
       const apiKey = "29a515a3dd9c5110969d7cfcedabebaa";
       const apiUrl =
-        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=chandigarh";
+        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-      async function checkWeather() {
-        const response = await fetch(apiUrl + `&appid=${apiKey}`);
+      const searchBox = document.querySelector(".search input");
+      const searchBtn = document.querySelector(".search button");
+
+      async function checkWeather(city) {
+        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
         var data = await response.json();
         console.log(data);
 
@@ -58,8 +61,9 @@
         document.querySelector(".wind .humidity").innerHTML =
           data.wind.speed + " km/hr";
       }
-
-      checkWeather();
+      searchBtn.addEventListener("click", () => {
+        checkWeather(searchBox.value);
+      });
     </script>
   </body>
 </html>
