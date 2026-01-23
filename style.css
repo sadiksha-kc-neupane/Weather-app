@@ -57,7 +57,9 @@ body {
 
 .weather-icon {
   width: 170px;
+  height: 170px;
   margin-top: 30px;
+  object-fit: contain;
 }
 
 .weather h1 {
@@ -93,4 +95,16 @@ body {
 .wind {
   font-size: 18px;
   margin-top: -10px;
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  display: none;
+  margin-top: 20px;
+  background-color: #ff4c4c;
+  padding: 10px;
+  border-radius: 5px;
 }
