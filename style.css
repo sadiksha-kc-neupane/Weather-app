@@ -6,13 +6,19 @@
 }
 
 body {
-  background: #eb85cb;
+  background-image: url("https://i.pinimg.com/736x/af/17/0d/af170d020f26f1be25018f13386d9b15.jpg");
+  background-position: center;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
   width: 90%;
   max-width: 470px;
-  background: linear-gradient(135deg, #8389cd, #557fd4);
+  background: linear-gradient(135deg, #6d75c4, #3761b5);
   color: #fff;
   margin: 100px auto 0;
   border-radius: 20px;
